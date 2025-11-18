@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belated Happy Birthday! 🌷</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5, #f0e6ff, #ffe6f0);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Floating Flowers */
+        .flower {
+            position: absolute;
+            font-size: 30px;
+            animation: floatFlower 8s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        @keyframes floatFlower {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Container */
+        .container {
+            background: white;
+            padding: 40px 35px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            width: 85%;
+            max-width: 600px;
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+            position: relative;
+            z-index: 10;
+            margin: 20px 0;
+        }
+        @keyframes fadeIn {
+            from { transform: scale(0.85) translateY(30px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        /* Flower decorations around container */
+        .flower-decoration {
+            position: absolute;
+            font-size: 40px;
+            animation: rotate 4s infinite linear;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 58px;
+            background: linear-gradient(135deg, #ff6b9d, #c44569, #ff8fab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 15px 0;
+            animation: slideDown 1.4s ease-out;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .birthday-message {
+            font-size: 22px;
+            color: #555;
+            margin: 25px 0;
+            line-height: 1.7;
+            animation: fadeInText 2s ease-out forwards;
+            padding: 0 10px;
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .flower-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-size: 32px;
+            animation: bounce 2s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .birthday-btn {
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 35px;
+            font-size: 22px;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 10px 25px rgba(255, 107, 157, 0.4);
+            animation: bounceIn 1.6s ease-out;
+            transition: 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.6); opacity: 0; }
+            60% { transform: scale(1.08); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .birthday-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(255, 107, 157, 0.5);
+        }
+
+        .small-note {
+            font-size: 15px;
+            color: #999;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Confetti effect */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff6b9d;
+            animation: confettiFall 3s infinite;
+        }
+        @keyframes confettiFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="flower-decoration" style="top: -20px; left: 20px;">🌷</div>
+        <div class="flower-decoration" style="top: -20px; right: 20px;">🌺</div>
+        <div class="flower-decoration" style="bottom: -20px; left: 20px;">🌷</div>
+        <div class="flower-decoration" style="bottom: -20px; right: 20px;">🌺</div>
+
+        <h1>Belated Happy Birthday! 🎉</h1>
+
+        <div class="flower-row">
+            <span>🌷</span>
+            <span>🌺</span>
+            <span>🌷</span>
+            <span>🌺</span>
+            <span>🌷</span>
+        </div>
+
+        <p class="birthday-message">
+            I'm really sorry I forgot your birthday 😔<br>
+            My end semester exams got the better of me...<br><br>
+            But better late than never! 🌷🌺<br><br>
+            Wishing you a belated birthday filled with<br>
+            beautiful tulips and lilies,<br>
+            just like you! ✨<br><br>
+            Hope you had an amazing day! 💕
+        </p>
+
+        <div class="flower-row">
+            <span>🌺</span>
+            <span>🌷</span>
+            <span>🌺</span>
+            <span>🌷</span>
+            <span>🌺</span>
+        </div>
+
+        <button class="birthday-btn" onclick="celebrate()">Accept My Apology? 🙏</button>
+
+        <p class="small-note">Made with love for someone special 💕</p>
+    </div>
+
+    <script>
+        /* Floating Flowers Generator */
+        const flowers = ['🌷', '🌺', '🌷', '🌺'];
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.className = "flower";
+            flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.animationDuration = (Math.random() * 3 + 5) + "s";
+            flower.style.fontSize = (Math.random() * 20 + 25) + "px";
+            document.body.appendChild(flower);
+            setTimeout(() => flower.remove(), 8000);
+        }
+        setInterval(createFlower, 400);
+
+        /* Confetti effect */
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#ff8fab', '#c44569', '#ffb3d1', '#ffc0cb'];
+            for (let i = 0; i < 30; i++) {
+                const confetti = document.createElement("div");
+                confetti.className = "confetti";
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 2 + "s";
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+
+        /* Celebrate button */
+        function celebrate() {
+            createConfetti();
+            setTimeout(() => {
+                window.location.href = "accepted.html";
+            }, 500);
+        }
+
+        /* Initial confetti on load */
+        setTimeout(createConfetti, 500);
+    </script>
+
+</body>
+</html>
+
